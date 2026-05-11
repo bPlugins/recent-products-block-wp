@@ -1,0 +1,450 @@
+{
+  "apiVersion": "3",
+  "name": "wrp/recent-products",
+  "title": "WooCommerce Recent Products",
+  "description": "Display WooCommerce Recent Products",
+  "category": "widgets",
+  "keywords": [
+    "woocommerce",
+    "recent products",
+    "latest products"
+  ],
+  "textdomain": "recent-products",
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "wide"
+    },
+    "cId": {
+      "type": "string",
+      "default": ""
+    },
+    "productsPerPage": {
+      "type": "number",
+      "default": 9
+    },
+    "stockStatus": {
+      "type": "array",
+      "default": [
+        "instock",
+        "outofstock",
+        "onbackorder"
+      ]
+    },
+    "selectedCategories": {
+      "type": "array",
+      "default": []
+    },
+    "columns": {
+      "type": "object",
+      "default": {
+        "desktop": 3,
+        "tablet": 2,
+        "mobile": 1
+      }
+    },
+    "columnGap": {
+      "type": "string",
+      "default": "30px"
+    },
+    "rowGap": {
+      "type": "string",
+      "default": "40px"
+    },
+    "isImage": {
+      "type": "boolean",
+      "default": true
+    },
+    "isTitle": {
+      "type": "boolean",
+      "default": true
+    },
+    "isRating": {
+      "type": "boolean",
+      "default": false
+    },
+    "isPrice": {
+      "type": "boolean",
+      "default": true
+    },
+    "isAddToCartBtn": {
+      "type": "boolean",
+      "default": true
+    },
+    "textAlign": {
+      "type": "string",
+      "default": "left"
+    },
+    "productBG": {
+      "type": "object",
+      "default": {
+        "color": "#0000"
+      }
+    },
+    "productBorder": {
+      "type": "object",
+      "default": {}
+    },
+    "productShadow": {
+      "type": "object",
+      "default": {}
+    },
+    "titleTypo": {
+      "type": "object",
+      "default": {
+        "fontSize": {
+          "desktop": 22,
+          "tablet": 20,
+          "mobile": 18
+        }
+      }
+    },
+    "titleColor": {
+      "type": "string",
+      "default": "#333"
+    },
+    "ratingColor": {
+      "type": "string",
+      "default": "#ffdf00"
+    },
+    "priceTypo": {
+      "type": "object",
+      "default": {
+        "fontSize": {
+          "desktop": 14,
+          "tablet": 14,
+          "mobile": 14
+        },
+        "fontWeight": 700
+      }
+    },
+    "priceColor": {
+      "type": "string",
+      "default": "#222"
+    },
+    "addToCartTypo": {
+      "type": "object",
+      "default": {
+        "fontSize": {
+          "desktop": 15,
+          "tablet": 15,
+          "mobile": 15
+        },
+        "fontWeight": 600
+      }
+    },
+    "addToCartColors": {
+      "type": "object",
+      "default": {
+        "color": "#fff",
+        "bg": "#4527a4"
+      }
+    },
+    "onSaleColors": {
+      "type": "object",
+      "default": {
+        "color": "#fff",
+        "bg": "#4527a4"
+      }
+    },
+    "styles": {
+      "type": "object",
+      "default": {
+        "bg": {
+          "type": "solid",
+          "color": ""
+        },
+        "border": "",
+        "radius": {
+          "top": "0px",
+          "right": "0px",
+          "bottom": "0px",
+          "left": "0px"
+        },
+        "padding": {
+          "top": "0px",
+          "right": "0px",
+          "bottom": "0px",
+          "left": "0px"
+        },
+        "margin": {
+          "top": "0px",
+          "right": "0px",
+          "bottom": "0px",
+          "left": "0px"
+        },
+        "shadow": [
+          {
+            "type": "box",
+            "hOffset": "0px",
+            "vOffset": "0px",
+            "blur": "0px",
+            "spreed": "0px",
+            "color": "",
+            "isInset": false
+          }
+        ],
+        "product": {
+          "bg": {
+            "type": "solid",
+            "color": "#FFF"
+          },
+          "padding": {
+            "top": "0px",
+            "right": "0px",
+            "bottom": "0px",
+            "left": "0px"
+          },
+          "radius": {
+            "top": "12px",
+            "right": "12px",
+            "bottom": "12px",
+            "left": "12px"
+          },
+          "border": {
+            "width": "1px",
+            "style": "solid",
+            "color": "#bbc6dd"
+          },
+          "hover": {
+            "shadow": [
+              {
+                "type": "box",
+                "hOffset": "0px",
+                "vOffset": "10px",
+                "blur": "15px",
+                "spreed": "-3px",
+                "color": "rgba(0, 0, 0, 0.1)",
+                "isInset": false
+              }
+            ],
+            "translateY": -4
+          },
+          "image": {
+            "width": "100%",
+            "height": "100%",
+            "objectFit": "cover",
+            "scale": 1.1
+          },
+          "content": {
+            "padding": {
+              "top": "16px",
+              "right": "16px",
+              "bottom": "16px",
+              "left": "16px"
+            },
+            "category": {
+              "typo": {
+                "fontFamily": "",
+                "fontCategory": "",
+                "fontWeight": "",
+                "fontVariant": "400",
+                "isUploadFont": true,
+                "fontSize": {
+                  "desktop": 14,
+                  "tablet": 14,
+                  "mobile": 14
+                },
+                "fontStyle": "normal",
+                "textTransform": "none",
+                "textDecoration": "none",
+                "lineHeight": "",
+                "letterSpace": "0px"
+              },
+              "color": "#80736b"
+            },
+            "name": {
+              "typo": {
+                "fontFamily": "",
+                "fontCategory": "",
+                "fontWeight": "600",
+                "fontVariant": "600",
+                "isUploadFont": true,
+                "fontSize": {
+                  "desktop": 18,
+                  "tablet": 18,
+                  "mobile": 18
+                },
+                "fontStyle": "normal",
+                "textTransform": "none",
+                "textDecoration": "none",
+                "lineHeight": "",
+                "letterSpace": "0px"
+              },
+              "color": "#111827"
+            },
+            "review": {
+              "icon": {
+                "color": "#fbbf24",
+                "size": "16px"
+              },
+              "value": {
+                "color": "#374151",
+                "typo": {
+                  "fontFamily": "",
+                  "fontCategory": "",
+                  "fontWeight": "",
+                  "fontVariant": "",
+                  "isUploadFont": true,
+                  "fontSize": {
+                    "desktop": 14,
+                    "tablet": 14,
+                    "mobile": 14
+                  },
+                  "fontStyle": "normal",
+                  "textTransform": "none",
+                  "textDecoration": "none",
+                  "lineHeight": "",
+                  "letterSpace": "0px"
+                }
+              }
+            },
+            "price": {
+              "salePrice": {
+                "color": "#111827",
+                "typo": {
+                  "fontFamily": "",
+                  "fontCategory": "",
+                  "fontWeight": "700",
+                  "fontVariant": "700",
+                  "isUploadFont": true,
+                  "fontSize": {
+                    "desktop": 20,
+                    "tablet": 20,
+                    "mobile": 20
+                  },
+                  "fontStyle": "normal",
+                  "textTransform": "none",
+                  "textDecoration": "none",
+                  "lineHeight": "",
+                  "letterSpace": "0px"
+                }
+              },
+              "regularPrice": {
+                "color": "#9ca3af",
+                "typo": {
+                  "fontFamily": "",
+                  "fontCategory": "",
+                  "fontWeight": "",
+                  "fontVariant": "",
+                  "isUploadFont": true,
+                  "fontSize": {
+                    "desktop": 14,
+                    "tablet": 14,
+                    "mobile": 14
+                  },
+                  "fontStyle": "normal",
+                  "textTransform": "none",
+                  "textDecoration": "line-through",
+                  "lineHeight": "",
+                  "letterSpace": "0px"
+                }
+              }
+            },
+            "addCart": {
+              "colors": {
+                "color": "#fff",
+                "bg": "#111827"
+              },
+              "padding": {
+                "top": "10px",
+                "right": "10px",
+                "bottom": "10px",
+                "left": "10px"
+              },
+              "radius": {
+                "top": "8px",
+                "right": "8px",
+                "bottom": "8px",
+                "left": "8px"
+              },
+              "icon": {
+                "size": 20
+              }
+            },
+            "tag": {
+              "colors": {
+                "color": "#fff",
+                "bg": "#ef4444"
+              },
+              "padding": {
+                "top": "4px",
+                "right": "10px",
+                "bottom": "4px",
+                "left": "10px"
+              },
+              "radius": {
+                "top": "6px",
+                "right": "6px",
+                "bottom": "6px",
+                "left": "6px"
+              },
+              "typo": {
+                "fontFamily": "",
+                "fontCategory": "",
+                "fontWeight": "600",
+                "fontVariant": "600",
+                "isUploadFont": true,
+                "fontSize": {
+                  "desktop": 12,
+                  "tablet": 12,
+                  "mobile": 12
+                },
+                "fontStyle": "normal",
+                "textTransform": "uppercase",
+                "textDecoration": "none",
+                "lineHeight": "",
+                "letterSpace": "0px"
+              }
+            }
+          }
+        }
+      }
+    },
+    "options": {
+      "type": "object",
+      "default": {
+        "isDiscountTag": true,
+        "isCategory": true
+      }
+    },
+    "radius": {
+      "type": "string",
+      "default": "0px"
+    },
+    "selectTheme": {
+      "type": "string",
+      "default": "default"
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "html": false
+  },
+  "example": {
+    "attributes": {
+      "preview": true,
+      "columns": {
+        "desktop": 1,
+        "tablet": 1,
+        "mobile": 1
+      }
+    }
+  },
+  "editorScript": [
+    "file:./index.js",
+    "wp-server-side-render",
+    "wp-api"
+  ],
+  "editorStyle": "file:./index.css",
+  "style": "file:./view.css",
+  "render": "file:./render.php",
+  "viewScript": [
+    "file:./view.js",
+    "react",
+    "react-dom"
+  ]
+}

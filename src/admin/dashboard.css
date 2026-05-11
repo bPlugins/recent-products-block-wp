@@ -1,0 +1,36 @@
+.bPlDashboard {
+  width: calc(100% + 20px);
+  max-width: calc(100% + 20px);
+  min-height: 100vh;
+  background: linear-gradient(180deg, rgba(250, 167, 43, 0.1333333333) 0%, rgba(43, 105, 250, 0) 100%), radial-gradient(circle at 10% 60%, rgba(86, 235, 255, 0.2470588235), transparent 25%), radial-gradient(circle at 90% 70%, rgba(247, 17, 122, 0.1215686275), transparent 20%), repeating-linear-gradient(to right, rgba(72, 87, 129, 0.0666666667) 0px, rgba(72, 87, 129, 0.0666666667) 1px, transparent 1px, transparent 50px), repeating-linear-gradient(to bottom, rgba(72, 87, 129, 0.0666666667) 0px, rgba(72, 87, 129, 0.0666666667) 1px, transparent 1px, transparent 50px);
+  margin: 0 -20px 0 -20px;
+}
+.bPlDashboard * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+.bPlDashboard .bPlDashboardContainer {
+  width: 100%;
+  max-width: 1320px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.bPlDashboard .bPlDashboardMain .bPlDashboardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  padding: 20px 0;
+}
+.bPlDashboard .bPlDashboardBox {
+  background-color: #fff;
+  border: 1px solid rgba(72, 87, 129, 0.5);
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: 0px 0px 0px 0px rgba(20, 10, 245, 0.2);
+}
+.bPlDashboard .bPlDashboardButtons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}/*# sourceMappingURL=dashboard.css.map */

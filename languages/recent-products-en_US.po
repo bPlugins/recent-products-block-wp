@@ -1,0 +1,255 @@
+# Copyright (C) 2024 bPlugins
+# This file is buildributed under the GPLv3.
+msgid ""
+msgstr ""
+"Project-Id-Version: Recent Products Block 1.0.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/recent-products-block\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-03-24T16:24:43+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.9.0\n"
+"X-Domain: recent-products\n"
+
+#. Plugin Name of the plugin
+msgid "Recent Products Block"
+msgstr ""
+
+#. Description of the plugin
+msgid "Display WooCommerce Recent Products"
+msgstr ""
+
+#. Author of the plugin
+msgid "bPlugins"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://bplugins.com"
+msgstr ""
+
+#: inc/block.php:41
+msgid "No product found! Please add some or change query..."
+msgstr ""
+
+#: inc/block.php:183
+msgid "Sale"
+msgstr ""
+
+#: inc/block.php:187
+msgid "Product on sale"
+msgstr ""
+
+#: index.php:45
+msgid "%1$s WooCommerce Recent Products Block.%2$s requires %1$sWooCommerce%2$s plugin to be active. Please activate WooCommerce to continue."
+msgstr ""
+
+#: index.php:47
+msgid "Activate WooCommerce"
+msgstr ""
+
+#: index.php:51
+msgid "%1$s WooCommerce Recent Products Block.%2$s requires %1$sWooCommerce%2$s plugin to be installed and activated. Please install WooCommerce to continue."
+msgstr ""
+
+#: index.php:53
+msgid "Install WooCommerce"
+msgstr ""
+
+#: build/index.js:1
+#: build/index.js:10326
+msgid "General"
+msgstr ""
+
+#: build/index.js:1
+#: build/index.js:10327
+msgid "Style"
+msgstr ""
+
+#: build/index.js:1
+#: build/index.js:10364
+msgid "Query"
+msgstr ""
+
+#: build/index.js:1
+#: build/index.js:10365
+msgid "Products Limit:"
+msgstr ""
+
+#: build/index.js:1
+#: build/index.js:10370
+msgid "Filter by Stock"
+msgstr ""
+
+#: build/index.js:1
+#: build/index.js:10371
+msgid "Show In Stock Products"
+msgstr ""
+
+#: build/index.js:1
+#: build/index.js:10373
+msgid "Show Out of Stock Products"
+msgstr ""
+
+#: build/index.js:1
+#: build/index.js:10375
+msgid "Show In On Backorder Products"
+msgstr ""
+
+#: build/index.js:1
+#: build/index.js:10379
+msgid "Filter by Category"
+msgstr ""
+
+#: build/index.js:1
+#: build/index.js:10380
+msgid "Select Categories:"
+msgstr ""
+
+#: build/index.js:1
+#: build/index.js:10388
+msgid "Layout"
+msgstr ""
+
+#: build/index.js:1
+#: build/index.js:10390
+msgid "Columns:"
+msgstr ""
+
+#: build/index.js:1
+#: build/index.js:10395
+msgid "Column Gap:"
+msgstr ""
+
+#: build/index.js:1
+#: build/index.js:10397
+msgid "Row Gap:"
+msgstr ""
+
+#: build/index.js:1
+#: build/index.js:10401
+msgid "Elements"
+msgstr ""
+
+#: build/index.js:1
+#: build/index.js:10402
+msgid "Show Image"
+msgstr ""
+
+#: build/index.js:1
+#: build/index.js:10404
+msgid "Show Title"
+msgstr ""
+
+#: build/index.js:1
+#: build/index.js:10406
+msgid "Show Rating"
+msgstr ""
+
+#: build/index.js:1
+#: build/index.js:10408
+msgid "Show Price"
+msgstr ""
+
+#: build/index.js:1
+#: build/index.js:10410
+msgid "Show Add To Cart Button"
+msgstr ""
+
+#: build/index.js:1
+#: build/index.js:10416
+msgid "Product"
+msgstr ""
+
+#: build/index.js:1
+#: build/index.js:10417
+msgid "Background:"
+msgstr ""
+
+#: build/index.js:1
+#: build/index.js:10419
+msgid "Border:"
+msgstr ""
+
+#: build/index.js:1
+#: build/index.js:10421
+msgid "Shadow:"
+msgstr ""
+
+#: build/index.js:1
+#: build/index.js:10425
+msgid "Product Title"
+msgstr ""
+
+#: build/index.js:1
+#: build/index.js:10426
+#: build/index.js:10439
+#: build/index.js:10447
+msgid "Typography:"
+msgstr ""
+
+#: build/index.js:1
+#: build/index.js:10427
+#: build/index.js:10440
+#: build/index.js:10448
+msgid "Font Family may not work in the backend."
+msgstr ""
+
+#: build/index.js:1
+#: build/index.js:10429
+#: build/index.js:10434
+#: build/index.js:10442
+msgid "Color:"
+msgstr ""
+
+#: build/index.js:1
+#: build/index.js:10433
+msgid "Product Rating"
+msgstr ""
+
+#: build/index.js:1
+#: build/index.js:10438
+msgid "Product Price"
+msgstr ""
+
+#: build/index.js:1
+#: build/index.js:10446
+msgid "Product Add To Cart Button"
+msgstr ""
+
+#: build/index.js:1
+#: build/index.js:10454
+msgid "On Sale Tag"
+msgstr ""
+
+#: build/index.js:1
+#: build/index.js:10500
+msgid "Loading..."
+msgstr ""
+
+#: inc/block.json
+msgctxt "block title"
+msgid "WooCommerce Recent Products"
+msgstr ""
+
+#: inc/block.json
+msgctxt "block description"
+msgid "Display WooCommerce Recent Products"
+msgstr ""
+
+#: inc/block.json
+msgctxt "block keyword"
+msgid "woocommerce"
+msgstr ""
+
+#: inc/block.json
+msgctxt "block keyword"
+msgid "recent products"
+msgstr ""
+
+#: inc/block.json
+msgctxt "block keyword"
+msgid "latest products"
+msgstr ""
