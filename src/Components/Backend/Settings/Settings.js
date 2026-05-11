@@ -114,10 +114,10 @@ const Settings = ({ attributes, setAttributes, allCategories }) => {
 
                       <PanelBody
                         className="bPlPanelBody"
-                        title={__("Query", "recent-products")}
+                        title={__("Query", "recent-products-block")}
                       >
                         <Label className="mb5">
-                          {__("Products Limit:", "recent-products")}
+                          {__("Products Limit:", "recent-products-block")}
                         </Label>
                         <RangeControl
                           value={productsPerPage}
@@ -131,11 +131,13 @@ const Settings = ({ attributes, setAttributes, allCategories }) => {
 
                         <hr />
 
-                        <h3>{__("Filter by Stock", "recent-products")}</h3>
+                        <h3>
+                          {__("Filter by Stock", "recent-products-block")}
+                        </h3>
                         <ToggleControl
                           label={__(
                             "Show In Stock Products",
-                            "recent-products",
+                            "recent-products-block",
                           )}
                           checked={stockStatus.includes("instock")}
                           onChange={(val) =>
@@ -147,7 +149,7 @@ const Settings = ({ attributes, setAttributes, allCategories }) => {
                           className="mt10"
                           label={__(
                             "Show Out of Stock Products",
-                            "recent-products",
+                            "recent-products-block",
                           )}
                           checked={stockStatus.includes("outofstock")}
                           onChange={(val) =>
@@ -159,7 +161,7 @@ const Settings = ({ attributes, setAttributes, allCategories }) => {
                           className="mt10"
                           label={__(
                             "Show In On Backorder Products",
-                            "recent-products",
+                            "recent-products-block",
                           )}
                           checked={stockStatus.includes("onbackorder")}
                           onChange={(val) =>
@@ -169,9 +171,11 @@ const Settings = ({ attributes, setAttributes, allCategories }) => {
 
                         <hr />
 
-                        <h3>{__("Filter by Category", "recent-products")}</h3>
+                        <h3>
+                          {__("Filter by Category", "recent-products-block")}
+                        </h3>
                         <Label className="mb5">
-                          {__("Select Categories:", "recent-products")}
+                          {__("Select Categories:", "recent-products-block")}
                         </Label>
                         <SelectPureControl
                           value={filterSelected(
@@ -192,13 +196,13 @@ const Settings = ({ attributes, setAttributes, allCategories }) => {
 
                       <PanelBody
                         className="bPlPanelBody"
-                        title={__("Layout", "recent-products")}
+                        title={__("Layout", "recent-products-block")}
                         initialOpen={false}
                       >
                         <Notice status="premium" isIcon={false}>
                           {__(
                             "Theme-1 and Theme-2 layouts are available in the ",
-                            "recent-products",
+                            "recent-products-block",
                           )}{" "}
                           <a
                             style={{}}
@@ -209,7 +213,7 @@ const Settings = ({ attributes, setAttributes, allCategories }) => {
                           </a>
                         </Notice>
                         <Label className="mb5">
-                          {__("Select A Theme", "recent-products")}
+                          {__("Select A Theme", "recent-products-block")}
                         </Label>
 
                         <SelectControl
@@ -225,7 +229,7 @@ const Settings = ({ attributes, setAttributes, allCategories }) => {
                         />
                         <PanelRow>
                           <Label className="mb5">
-                            {__("Columns:", "recent-products")}
+                            {__("Columns:", "recent-products-block")}
                           </Label>
                           <Device
                             device={device}
@@ -248,7 +252,7 @@ const Settings = ({ attributes, setAttributes, allCategories }) => {
 
                         <UnitControl
                           className="mt20"
-                          label={__("Column Gap:", "recent-products")}
+                          label={__("Column Gap:", "recent-products-block")}
                           labelPosition="left"
                           value={columnGap}
                           onChange={(val) => setAttributes({ columnGap: val })}
@@ -258,7 +262,7 @@ const Settings = ({ attributes, setAttributes, allCategories }) => {
 
                         <UnitControl
                           className="mt20"
-                          label={__("Row Gap:", "recent-products")}
+                          label={__("Row Gap:", "recent-products-block")}
                           labelPosition="left"
                           value={rowGap}
                           onChange={(val) => setAttributes({ rowGap: val })}
@@ -269,32 +273,32 @@ const Settings = ({ attributes, setAttributes, allCategories }) => {
 
                       <PanelBody
                         className="bPlPanelBody"
-                        title={__("Elements", "recent-products")}
+                        title={__("Elements", "recent-products-block")}
                         initialOpen={false}
                       >
                         <ToggleControl
-                          label={__("Show Image", "recent-products")}
+                          label={__("Show Image", "recent-products-block")}
                           checked={isImage}
                           onChange={(val) => setAttributes({ isImage: val })}
                         />
 
                         <ToggleControl
                           className="mt10"
-                          label={__("Show Title", "recent-products")}
+                          label={__("Show Title", "recent-products-block")}
                           checked={isTitle}
                           onChange={(val) => setAttributes({ isTitle: val })}
                         />
 
                         <ToggleControl
                           className="mt10"
-                          label={__("Show Rating", "recent-products")}
+                          label={__("Show Rating", "recent-products-block")}
                           checked={isRating}
                           onChange={(val) => setAttributes({ isRating: val })}
                         />
 
                         <ToggleControl
                           className="mt10"
-                          label={__("Show Price", "recent-products")}
+                          label={__("Show Price", "recent-products-block")}
                           checked={isPrice}
                           onChange={(val) => setAttributes({ isPrice: val })}
                         />
@@ -303,7 +307,7 @@ const Settings = ({ attributes, setAttributes, allCategories }) => {
                           className="mt10"
                           label={__(
                             "Show Add To Cart Button",
-                            "recent-products",
+                            "recent-products-block",
                           )}
                           checked={isAddToCartBtn}
                           onChange={(val) =>
@@ -328,10 +332,10 @@ const Settings = ({ attributes, setAttributes, allCategories }) => {
                     <>
                       <PanelBody
                         className="bPlPanelBody"
-                        title={__("Container", "recent-products")}
+                        title={__("Container", "recent-products-block")}
                       >
                         <Background
-                          label={__("Background:", "recent-products")}
+                          label={__("Background:", "recent-products-block")}
                           value={styles["bg"]}
                           onChange={(val) =>
                             setAttributes({ styles: { ...styles, bg: val } })
@@ -339,7 +343,7 @@ const Settings = ({ attributes, setAttributes, allCategories }) => {
                         />
                         <BoxControl
                           className="mt10"
-                          label={__("Radius:", "recent-products")}
+                          label={__("Radius:", "recent-products-block")}
                           values={
                             styles["radius"] || {
                               top: "0px",
@@ -356,7 +360,7 @@ const Settings = ({ attributes, setAttributes, allCategories }) => {
                         />
                         <BoxControl
                           className="mt10"
-                          label={__("Padding:", "recent-products")}
+                          label={__("Padding:", "recent-products-block")}
                           values={
                             styles["padding"] || {
                               top: "0px",
@@ -373,7 +377,7 @@ const Settings = ({ attributes, setAttributes, allCategories }) => {
                         />
                         <BoxControl
                           className="mt10"
-                          label={__("Margin:", "recent-products")}
+                          label={__("Margin:", "recent-products-block")}
                           values={
                             styles["margin"] || {
                               top: "0px",
@@ -390,7 +394,7 @@ const Settings = ({ attributes, setAttributes, allCategories }) => {
                         />
                         <ShadowControl
                           className="mt10"
-                          label={__("Shadow:", "recent-products")}
+                          label={__("Shadow:", "recent-products-block")}
                           value={styles["shadow"]}
                           onChange={(val) =>
                             setAttributes({
@@ -401,16 +405,16 @@ const Settings = ({ attributes, setAttributes, allCategories }) => {
                       </PanelBody>
                       <PanelBody
                         className="bPlPanelBody"
-                        title={__("Product", "recent-products")}
+                        title={__("Product", "recent-products-block")}
                       >
                         <Background
-                          label={__("Background:", "recent-products")}
+                          label={__("Background:", "recent-products-block")}
                           value={productBG}
                           onChange={(val) => setAttributes({ productBG: val })}
                         />
 
                         <BorderControl
-                          label={__("Border:", "recent-products")}
+                          label={__("Border:", "recent-products-block")}
                           value={productBorder}
                           onChange={(val) =>
                             setAttributes({ productBorder: val })
@@ -418,7 +422,7 @@ const Settings = ({ attributes, setAttributes, allCategories }) => {
                         />
 
                         <ShadowControl
-                          label={__("Shadow:", "recent-products")}
+                          label={__("Shadow:", "recent-products-block")}
                           value={productShadow}
                           onChange={(val) =>
                             setAttributes({ productShadow: val })
@@ -429,11 +433,11 @@ const Settings = ({ attributes, setAttributes, allCategories }) => {
                       {isTitle && (
                         <PanelBody
                           className="bPlPanelBody"
-                          title={__("Product Title", "recent-products")}
+                          title={__("Product Title", "recent-products-block")}
                           initialOpen={false}
                         >
                           <Typography
-                            label={__("Typography:", "recent-products")}
+                            label={__("Typography:", "recent-products-block")}
                             value={titleTypo}
                             onChange={(val) =>
                               setAttributes({ titleTypo: val })
@@ -445,12 +449,12 @@ const Settings = ({ attributes, setAttributes, allCategories }) => {
                           <small>
                             {__(
                               "Font Family may not work in the backend.",
-                              "recent-products",
+                              "recent-products-block",
                             )}
                           </small>
 
                           <ColorControl
-                            label={__("Color:", "recent-products")}
+                            label={__("Color:", "recent-products-block")}
                             value={titleColor}
                             onChange={(val) =>
                               setAttributes({ titleColor: val })
@@ -463,11 +467,11 @@ const Settings = ({ attributes, setAttributes, allCategories }) => {
                       {isRating && (
                         <PanelBody
                           className="bPlPanelBody"
-                          title={__("Product Rating", "recent-products")}
+                          title={__("Product Rating", "recent-products-block")}
                           initialOpen={false}
                         >
                           <ColorControl
-                            label={__("Color:", "recent-products")}
+                            label={__("Color:", "recent-products-block")}
                             value={ratingColor}
                             onChange={(val) =>
                               setAttributes({ ratingColor: val })
@@ -480,11 +484,11 @@ const Settings = ({ attributes, setAttributes, allCategories }) => {
                       {isPrice && (
                         <PanelBody
                           className="bPlPanelBody"
-                          title={__("Product Price", "recent-products")}
+                          title={__("Product Price", "recent-products-block")}
                           initialOpen={false}
                         >
                           <Typography
-                            label={__("Typography:", "recent-products")}
+                            label={__("Typography:", "recent-products-block")}
                             value={priceTypo}
                             onChange={(val) =>
                               setAttributes({ priceTypo: val })
@@ -497,12 +501,12 @@ const Settings = ({ attributes, setAttributes, allCategories }) => {
                           <small>
                             {__(
                               "Font Family may not work in the backend.",
-                              "recent-products",
+                              "recent-products-block",
                             )}
                           </small>
 
                           <ColorControl
-                            label={__("Color:", "recent-products")}
+                            label={__("Color:", "recent-products-block")}
                             value={priceColor}
                             onChange={(val) =>
                               setAttributes({ priceColor: val })
@@ -517,12 +521,12 @@ const Settings = ({ attributes, setAttributes, allCategories }) => {
                           className="bPlPanelBody"
                           title={__(
                             "Product Add To Cart Button",
-                            "recent-products",
+                            "recent-products-block",
                           )}
                           initialOpen={false}
                         >
                           <Typography
-                            label={__("Typography:", "recent-products")}
+                            label={__("Typography:", "recent-products-block")}
                             value={addToCartTypo}
                             onChange={(val) =>
                               setAttributes({ addToCartTypo: val })
@@ -535,7 +539,7 @@ const Settings = ({ attributes, setAttributes, allCategories }) => {
                           <small>
                             {__(
                               "Font Family may not work in the backend.",
-                              "recent-products",
+                              "recent-products-block",
                             )}
                           </small>
 
@@ -551,7 +555,7 @@ const Settings = ({ attributes, setAttributes, allCategories }) => {
 
                       <PanelBody
                         className="bPlPanelBody"
-                        title={__("On Sale Tag", "recent-products")}
+                        title={__("On Sale Tag", "recent-products-block")}
                         initialOpen={false}
                       >
                         <ColorsControl

@@ -5,9 +5,10 @@
  * Version: 2.0.1
  * Author: bPlugins
  * Author URI: https://bplugins.com
+ * Plugin URI: https://github.com/bPlugins/recent-products-block-wp.git
  * License: GPLv3
  * License URI: https://www.gnu.org/licenses/gpl-3.0.txt
- * Text Domain: recent-products
+ * Text Domain: recent-products-block
  * @fs_free_only /vendor/freemius-lite
  */
 

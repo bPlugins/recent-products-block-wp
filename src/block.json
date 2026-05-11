@@ -5,7 +5,7 @@
   "description": "Display WooCommerce Recent Products",
   "category": "widgets",
   "keywords": ["woocommerce", "recent products", "latest products"],
-  "textdomain": "recent-products",
+  "textdomain": "recent-products-block",
   "attributes": {
     "align": {
       "type": "string",

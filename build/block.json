@@ -9,7 +9,7 @@
     "recent products",
     "latest products"
   ],
-  "textdomain": "recent-products",
+  "textdomain": "recent-products-block",
   "attributes": {
     "align": {
       "type": "string",

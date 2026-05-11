@@ -54,7 +54,7 @@ if ( empty( $products ) && $theme !== 'advanced' ) {
     class="<?php echo esc_attr( $blockClassName ); ?>"
     id="wrpRecentProducts-<?php echo esc_attr( $cId ); ?>"
     data-theme="<?php echo esc_attr( $theme ); ?>"
-    data-attributes='<?php echo wp_json_encode( $attributes ); ?>'
+    data-attributes='<?php echo esc_attr( wp_json_encode( $attributes ) ); ?>'
 >
 
     <style>

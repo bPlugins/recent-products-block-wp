@@ -9,6 +9,20 @@ Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
+== External Services ==
+
+This plugin connects to Freemius services for analytics,
+plugin updates, and opt-in functionality.
+
+Service Provider:
+Freemius
+
+Terms:
+https://freemius.com/terms/
+
+Privacy Policy:
+https://freemius.com/privacy/
+
 Recent Products Block showcases your WooCommerce Recently added product in block Widgets, or anywhere in the block editor area. 
 
 == Description ==
