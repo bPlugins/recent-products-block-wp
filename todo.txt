@@ -1,0 +1,19 @@
+Featured Products filter
+// The tax query
+$tax_query[] = array(
+	'taxonomy'	=> 'product_visibility',
+	'field'		=> 'name',
+	'terms'		=> 'featured',
+	'operator'	=> 'IN', // or 'NOT IN' to exclude feature products
+);
+
+// The query
+$query = new WP_Query( array(
+	'post_type'				=> 'product',
+	'post_status'			=> 'publish',
+	'ignore_sticky_posts'	=> 1,
+	'posts_per_page'		=> $products,
+	'orderby'				=> $orderby,
+	'order'					=> $order == 'asc' ? 'asc' : 'desc',
+	'tax_query'				=> $tax_query // <===
+) );

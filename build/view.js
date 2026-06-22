@@ -1,0 +1,1 @@
+(()=>{"use strict";document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll(".wp-block-wrp-recent-products").forEach(t=>{t?.removeAttribute("data-attributes")})})})();
