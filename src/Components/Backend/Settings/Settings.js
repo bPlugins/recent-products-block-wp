@@ -15,9 +15,10 @@ import {
 } from "@wordpress/components";
 
 
+import "../../../../../bpl-tools/Components/style.scss"
 import Label from "../../../../../bpl-tools/Components/Label/Label"
 import Background from "../../../../../bpl-tools/Components/Background/Background"
-import ColorControl from "../../../../../bpl-tools/Components/ColorControl/ColorControl"
+import { ColorControl } from "../../../../../bpl-tools/Components/ColorControl/ColorControl"
 import Device from "../../../../../bpl-tools/Components/Device/Device"
 import ColorsControl from "../../../../../bpl-tools/Components/ColorsControl/ColorsControl"
 import HelpPanel from "../../../../../bpl-tools/Components/HelpPanel/HelpPanel"
