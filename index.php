@@ -13,7 +13,8 @@
  * Requires at least: 6.5
  * Requires PHP: 7.4
  * Requires Plugins:  woocommerce
- * 
+ * @fs_premium_only /vendor/freemius-lite,
+ *
  */
 
 // ABS PATH
@@ -25,24 +26,84 @@ if ( !defined( 'ABSPATH' ) ) { exit; }
          define( 'RECENT_PRODUCTS_BLOCK_DIR_URL', plugin_dir_url( __FILE__ ) );
          define( 'RECENT_PRODUCTS_BLOCK_DIR_PATH', plugin_dir_path( __FILE__ ) );
 
+// freemius
+ if ( function_exists( 'wrp_fs' ) ) {
 
+		register_activation_hook( __FILE__, function () {
+			if ( is_plugin_active( 'recent-products-block/index.php' ) ) {
+				deactivate_plugins( 'recent-products-block/index.php' );
+			}
+			if ( is_plugin_active( 'recent-products-block-pro/index.php' ) ) {
+				deactivate_plugins( 'recent-products-block-pro/index.php' );
+			}
+		} );
+    } else {
+      
+
+
+        if ( ! function_exists( 'wrp_fs' ) ) {
+
+            // ... Freemius integration snippet ...
+	 function wrp_fs() {
+        global $wrp_fs;
+
+        // Include Freemius SDK.
+          if ( ! isset( $wrp_fs ) ) {
+
+						require_once RECENT_PRODUCTS_BLOCK_DIR_PATH . '/vendor/freemius-lite/start.php';
+
+            $apbConfig = array(
+                '__FILE__'            => __FILE__,
+                'id'                  => '23056',
+                'slug'                => 'recent-products-block',
+                'premium_slug'        => 'recent-products-block-pro',
+                'type'                => 'plugin',
+                'public_key'          => 'pk_e4706ce581c33e77292c9ac80d1fe',
+                'is_premium'          => false,
+                'premium_suffix'      => 'Pro',
+    
+                'has_premium_version' => true,
+                'has_addons'          => false,
+                'has_paid_plans'      => true,
+                'trial'               => array(
+                    'days'               => 7,
+                    'is_require_payment' => true,
+                ),
+                'menu'                => array(
+                    'slug'           => 'recent-products-dashboard',
+                    'first-path'     => 'admin.php?page=recent-products-dashboard#/welcome',
+                    'contact'        => false,
+                    'support'        => false,
+                ),
+            );
+            $wrp_fs = fs_lite_dynamic_init( $apbConfig );
+        }
+
+        return $wrp_fs;
+     }
+     wrp_fs();
+    // Signal that SDK was initiated.
+    do_action( 'wrp_fs_loaded' );
+        }
 
 	
+
 		require_once RECENT_PRODUCTS_BLOCK_DIR_PATH . 'inc/BlockRenderer.php';
         require_once RECENT_PRODUCTS_BLOCK_DIR_PATH . 'inc/adminMenu.php';
+       
 
 
         // ... Your plugin's main file logic ...
 	class Recent_Products_Block_Plugin{
 	     function __construct(){
-		add_action('init', [$this, 'init']); 
+		add_action('init', [$this, 'init']);
 		add_action( 'plugins_loaded', [$this, 'pluginsLoaded'] );
 	}
-	
+
 	function init() {
 		register_block_type(__DIR__ . '/build');
         wp_set_script_translations('wrp-recent-products-editor-script', 'recent-products-block', plugin_dir_path(__FILE__) . 'languages');
-		 
+
       }
 
 	function pluginsLoaded(){
@@ -58,13 +119,13 @@ if ( !defined( 'ABSPATH' ) ) { exit; }
 		}
 
 		$woocommerce = 'woocommerce/woocommerce.php';
-		
+
 		if ( $this->isPluginInstalled( $woocommerce ) ) {
 			$activationUrl = wp_nonce_url( 'plugins.php?action=activate&plugin=' . $woocommerce . '&plugin_status=all&paged=1&s', 'activate-plugin_' . $woocommerce );
-			
+
 			/* translators: 1: Strong opening tag, 2: Strong closing tag */
 			$message = sprintf( esc_html__( '%1$s WooCommerce Recent Products Block.%2$s requires %1$sWooCommerce%2$s plugin to be active. Please activate WooCommerce to continue.', 'recent-products-block' ), '<strong>', '</strong>' );
-			
+
 			$button_text = esc_html__( 'Activate WooCommerce', 'recent-products-block' );
 		} else {
 			$activationUrl = wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=woocommerce' ), 'install-plugin_woocommerce' );
@@ -74,9 +135,9 @@ if ( !defined( 'ABSPATH' ) ) { exit; }
 
 			$button_text = esc_html__( 'Install WooCommerce', 'recent-products-block' );
 		}
-		
+
 		$button = '<p><a href="'. esc_url( $activationUrl ) . '" class="button-primary">'. esc_html( $button_text ) .'</a></p>';
-		
+
 		printf( '<div class="error"><p>%1$s</p>%2$s</div>', wp_kses_post( $message ), wp_kses_post( $button ) );
 	}
 
@@ -86,18 +147,13 @@ if ( !defined( 'ABSPATH' ) ) { exit; }
 		}
 
 		$installedPlugins = get_plugins();
-		
+
 		return isset( $installedPlugins[$basename] );
 	}
 
-	
+
 }
 
 new Recent_Products_Block_Plugin();
 
-
-    
-
-
-
-
+    }
